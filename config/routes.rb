@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
-  get 'site/index'
-  devise_for :users
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Defines the root path route ("/")
-  # root "articles#index"
+  devise_for :users,
+             controller: {
+               registrations: 'registrations',
+               sessions: 'sessions'
+             }
+  root 'site#index'
 end
