@@ -8,16 +8,16 @@ class User < ApplicationRecord
          :validatable
 
   after_create_commit lambda {
-                        broadcast_prepend_to 'users_list', target: 'users'
+                        broadcast_prepend_later_to 'users_list', target: 'users' # , partial
                       }
 
   after_update_commit lambda {
-                        broadcast_replace_to 'users_list',
-                                             target: "#{dom_id self}_row"
+                        broadcast_replace_later_to 'users_list',
+                                                   target: "#{dom_id self}_row"
                       }
 
   after_destroy_commit lambda {
-                         broadcast_remove_to 'users_list',
-                                             target: "#{dom_id self}_row"
+                         broadcast_remove_later_to 'users_list',
+                                                   target: "#{dom_id self}_row"
                        }
 end
