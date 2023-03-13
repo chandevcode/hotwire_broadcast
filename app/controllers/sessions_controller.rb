@@ -6,7 +6,7 @@ class SessionsController < Devise::SessionsController
     resource.update(online: true)
     resource.broadcast_replace_to(
       'users_list',
-      target: "#{dom_id resource} _row",
+      target: "#{dom_id resource}_row",
       partial: 'users/user'
     )
   end

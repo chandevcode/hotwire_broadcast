@@ -1,4 +1,4 @@
-class RegistrationsController < Devise::RegistrationsControler
+class RegistrationsController < Devise::RegistrationsController
   include ActionView::RecordIdentifier
 
   def create
