@@ -10,7 +10,7 @@
     </div>
     <div class="my-5">
       <%= f.label :email %><br />
-      <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "block shadow rounded-md border border-gray-200  outline-none px-3 py-2 mt-2 w-full"%>
+      <%= f.email_field :email,  class: "block shadow rounded-md border border-gray-200  outline-none px-3 py-2 mt-2 w-full"%>
     </div>
 
     <div class="my-5">
@@ -18,7 +18,7 @@
       <% if @minimum_password_length %>
         <em>(<%= @minimum_password_length %> characters minimum)</em>
       <% end %><br />
-      <%= f.password_field :password, autocomplete: "new-password", class: "block shadow rounded-md border border-gray-200  outline-none px-3 py-2 mt-2 w-full" %>
+      <%= f.password_field :password,  class: "block shadow rounded-md border border-gray-200  outline-none px-3 py-2 mt-2 w-full" %>
     </div>
 
     <div class="my-5">
