@@ -5,16 +5,16 @@
     <%= render "devise/shared/error_messages", resource: resource %>
 
     <div class="my-5">
-     <%= f.label :name %> 
+     <%= f.label :name, class: "dark:text-white dark:font-bold" %> 
      <%= f.text_field :name, class: "block shadow rounded-md border border-gray-200  outline-none px-3 py-2 mt-2 w-full" %>
     </div>
     <div class="my-5">
-      <%= f.label :email %><br />
+      <%= f.label :email , class: "dark:text-white dark:font-bold"%><br />
       <%= f.email_field :email,  class: "block shadow rounded-md border border-gray-200  outline-none px-3 py-2 mt-2 w-full"%>
     </div>
 
     <div class="my-5">
-      <%= f.label :password %>
+      <%= f.label :password , class: "dark:text-white dark:font-bold"%>
       <% if @minimum_password_length %>
         <em>(<%= @minimum_password_length %> characters minimum)</em>
       <% end %><br />
@@ -22,7 +22,7 @@
     </div>
 
     <div class="my-5">
-      <%= f.label :password_confirmation %><br />
+      <%= f.label :password_confirmation , class: "dark:text-white dark:font-bold"%><br />
       <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "block shadow rounded-md border border-gray-200  outline-none px-3 py-2 mt-2 w-full" %>
     </div>
 
